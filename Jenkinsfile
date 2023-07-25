@@ -8,7 +8,8 @@ pipeline {
         }
         stage('Build') { 
             steps {
-                sh 'msbuild WEBn.sln /p:Configuration=Release'
+                 msbuild tool: 'MSBuild-5.0', projectFile: 'WEB.csproj', targets: 'Build', properties: [configuration: 'Release']
+        
                 echo 'Building..'
             }
         }
