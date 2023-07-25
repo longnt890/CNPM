@@ -1,6 +1,11 @@
 pipeline {
     agent any 
     stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/longnt890/CNPM.git'
+            }
+        }
         stage('Build') { 
             steps {
                 echo 'Building..'
@@ -18,18 +23,4 @@ pipeline {
         }
     }
 }
-pipeline {
-  agent any
-  stages {
-    stage('Build') {
-      steps {
-        sh 'mvn clean install'
-      }
-    }
-    stage('Deploy') {
-      steps {
-        sh 'cp target/*.war /opt/webserver/webapps'
-      }
-    }
-  }
-}
+
