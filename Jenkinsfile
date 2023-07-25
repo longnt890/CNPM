@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build') { 
             steps {
-                sh 'msbuild YourSolution.sln /p:Configuration=Release'
+                sh 'msbuild WEBn.sln /p:Configuration=Release'
                 echo 'Building..'
             }
         }
