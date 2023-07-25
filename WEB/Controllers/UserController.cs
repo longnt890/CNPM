@@ -8,7 +8,7 @@ namespace WEB.Controllers
 {
     public class UserController : Controller
     {
-        QLCH1Entities1 db = new QLCH1Entities1();
+        QLCH1Entities1 db = new QLCH1Entities1();//Hello
         // GET: User
         [HttpGet]
         public ActionResult Login()
