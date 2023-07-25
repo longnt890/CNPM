@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build') { 
             steps {
-                 sh 'npm install'
+                sh 'msbuild YourSolution.sln /p:Configuration=Release'
                 echo 'Building..'
             }
         }
